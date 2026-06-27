@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ответы на экзаменационные билеты по Python и Kivy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #1e1e1e;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 10px;
+            border-bottom: 3px solid #ffffff;
+            padding-bottom: 15px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #a0a0a0;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        .ticket-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        .ticket {
+            background: #2a2a2a;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+            border-left: 6px solid #ffffff;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .ticket:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+        }
+
+        .ticket-number {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #ffffff;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .ticket-number::before {
+            content: "🎫";
+            font-size: 1.3rem;
+        }
+
+        .question {
+            margin-bottom: 12px;
+        }
+
+        .question strong {
+            color: #ffffff;
+            display: block;
+            margin-bottom: 3px;
+            font-size: 1rem;
+        }
+
+        .question p {
+            background: #333333;
+            padding: 10px 14px;
+            border-radius: 8px;
+            margin: 0;
+            color: #d4d4d4;
+            font-size: 0.95rem;
+            border-left: 3px solid #ffffff;
+        }
+
+        .answer {
+            margin-top: 6px;
+            padding-left: 5px;
+        }
+
+        .answer p {
+            background: #2c2c2c;
+            padding: 10px 14px;
+            border-radius: 8px;
+            margin: 8px 0 0 0;
+            color: #d0d0d0;
+            font-size: 0.95rem;
+            border-left: 3px solid #ffffff;
+        }
+
+        .answer p:last-child {
+            margin-bottom: 0;
+        }
+
+        .answer ul, .answer ol {
+            background: #2c2c2c;
+            padding: 8px 14px 14px 30px;
+            border-radius: 8px;
+            margin: 5px 0 0 0;
+            border-left: 3px solid #ffffff;
+        }
+
+        .answer li {
+            margin-bottom: 5px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #3a3a3a;
+            color: #ffffff;
+            font-size: 0.7rem;
+            padding: 2px 10px;
+            border-radius: 20px;
+            margin-top: 8px;
+            font-weight: 600;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            .ticket-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Ответы на экзаменационные билеты</h1>
+        <p class="subtitle">Python, Kivy, KivyMD, ООП, UML и методологии разработки</p>
+        <div class="ticket-grid">
+            <!-- Билет №1 -->
+            <div class="ticket">
+                <div class="ticket-number">Билет №1</div>
+                <div class="question"><strong>1. История создания языка Python. Сферы применения</strong><p>Создан Гвидо ван Россумом в 1991 году. Название — отсылка к комедийному шоу «Летающий цирк Монти Пайтона». Применяется в веб-разработке (Django, Flask), научных вычислениях (NumPy, SciPy), машинном обучении (TensorFlow, PyTorch), автоматизации, написании скриптов, разработке игр (Pygame) и GUI-приложений.</p></div>
+                <div class="question"><strong>2. Термин API. Возможности применения API</strong><p>API (Application Programming Interface) — это набор правил и инструментов для взаимодействия между программами. Позволяет интегрировать сервисы (Google Maps, платежные системы), получать данные (погода, курсы валют), автоматизировать задачи и расширять функциональность приложений.</p></div>
+            </div>
+
+            <!-- Билет №2 -->
+            <div class="ticket">
+                <div class="ticket-number">Билет №2</div>
+                <div class="question"><strong>1. Использование командной строки Python Shell. Основные принципы работы с аргументами командной строки</strong><p>Python Shell (REPL) позволяет выполнять код в интерактивном режиме. Аргументы командной строки передаются через sys.argv, где sys.argv[0] — имя скрипта, а остальные — параметры. Используется модуль argparse для парсинга сложных аргументов.</p></div>
+                <div class="question"><strong>2. Технология написания бота на языке Python</strong><p>Ботов пишут с использованием библиотек: python-telegram-bot, aiogram (для Telegram), discord.py (для Discord). Основной принцип: обработка событий (команды, сообщения), использование API мессенджеров, асинхронность для высокой производительности.</p></div>
+            </div>
+
+            <!-- Билет №3 -->
+            <div class="ticket">
+                <div class="ticket-number">Билет №3</div>
+                <div class="question"><strong>1. Типы данных языка Python</strong><p>Основные: int, float, complex (числа); str (строки); bool (логический); list, tuple, dict, set, frozenset (коллекции); NoneType. Также есть bytes, bytearray, memoryview и др.</p></div>
+                <div class="question"><strong>2. Инструментальные средства для разработки кроссплатформенных приложений на Python</strong><p>Основные фреймворки: Kivy (для мобильных и десктопных приложений), BeeWare (Toga), PyQt/PySide (для десктопа), Flask/Django (веб-приложения, доступны на всех платформах).</p></div>
+            </div>
+
+            <!-- Билет №4 -->
+            <div class="ticket">
+                <div class="ticket-number">Билет №4</div>
+                <div class="question"><strong>1. Работа с переменными в языке Python</strong><p>Переменные создаются при первом присваивании (динамическая типизация). Имена чувствительны к регистру, могут содержать буквы, цифры и '_'. Нельзя использовать зарезервированные слова. Пример: x = 10, name = "John".</p></div>
+                <div class="question"><strong>2. Фреймоворк Kivy, язык KV и виджеты, как основа пользовательского интерфейса</strong><p>Kivy — открытый фреймворк для создания мультитач-приложений. Язык KV (Kivy Language) — декларативный язык для описания интерфейса. Виджеты — базовые элементы UI (Button, Label, TextInput и др.), которые строятся в дерево виджетов.</p></div>
+            </div>
+
+            <!-- Билет №5 -->
+            <div class="ticket">
+                <div class="ticket-number">Билет №5</div>
+                <div class="question"><strong>1. Встроенные функции языка Python</strong><p>Примеры: print(), len(), type(), int(), str(), list(), dict(), sorted(), sum(), min(), max(), open(), input(), range(), enumerate(), zip(), map(), filter(), и многие другие.</p></div>
+                <div class="question"><strong>2. Зарезервированные слова и выражения в языке KV</strong><p>Ключевые слова в KV: canvas, on_press, on_release, id, pos, size, text, color, background_color, font_size, orientation, spacing, padding, size_hint, pos_hint и др. Используются для настройки свойств виджетов.</p></div>
+            </div>
+
+            <!-- Билет №6 -->
+            <div class="ticket">
+                <div class="ticket-number">Билет №6</div>
+                <div class="question"><strong>1. Основные операторы языка Python</strong><p>Арифметические (+, -, *, /, //, %, **), сравнения (==, !=, >, <, >=, <=), логические (and, or, not), присваивания (=, +=, -= и др.), принадлежности (in, not in), тождественности (is, is not).</p></div>
+                <div class="question"><strong>2. Компоновка приложения из фрагментов методом соглашения имен</strong><p>В Kivy используется kv-файл с тем же именем, что и класс приложения (например, MyApp -> my.kv). Это позволяет автоматически связывать логику и интерфейс. Также используют id для обращения к виджетам из Python-кода.</p></div>
+            </div>
+
+            <!-- Билет №7 -->
+            <div class="ticket">
+                <div class="ticket-number">Билет №7</div>
+                <div class="question"><strong>1. Методы работы с типами данных: строка, число</strong><p>Строки: lower(), upper(), strip(), split(), join(), replace(), find(), format(), f-строки. Числа: int(), float(), round(), abs(), pow(), math.floor(), math.ceil(), преобразования между системами счисления.</p></div>
+                <div class="question"><strong>2. Виджеты в Kivy</strong><p>Основные виджеты: Label (текст), Button (кнопка), TextInput (ввод текста), Image (изображение), Slider (ползунок), Switch (переключатель), CheckBox (флажок), ProgressBar (индикатор прогресса), DropDown (выпадающий список).</p></div>
+            </div>
+
+            <!-- Билет №8 -->
+            <div class="ticket">
+                <div class="ticket-number">Билет №8</div>
+                <div class="question"><strong>1. Использование операторов языка Python</strong><p>Операторы используются для выполнения операций над данными. Например: a = 5 + 3 (арифметический), if x > 10: (сравнения), if a and b: (логический), for i in range(5): (циклический).</p></div>
+                <div class="question"><strong>2. Задание размеров и положения виджетов в окне приложения Kivy</strong><p>Используются свойства size (фиксированный размер), size_hint (доля от родителя), pos (фиксированная позиция), pos_hint (относительная позиция, например {'x': 0.5, 'y': 0.5}).</p></div>
+            </div>
+
+            <!-- Билет №9 -->
+            <div class="ticket">
+                <div class="ticket-number">Билет №9</div>
+                <div class="question"><strong>1. Условные конструкторы</strong><p>if, elif, else. Также тернарный оператор: x = a if condition else b. Могут быть вложенными. Используются для ветвления логики программы.</p></div>
+                <div class="question"><strong>2. Задание виджетам цвета фона</strong><p>В Kivy используется свойство background_color или canvas.before с Color и Rectangle. В KV: background_color: 1, 0, 0, 1 (красный). Для Label используется canvas.before для заливки фона.</p></div>
+            </div>
+
+            <!-- Билет №10 -->
+            <div class="ticket">
+                <div class="ticket-number">Билет №10</div>
+                <div class="question"><strong>1. Циклические алгоритмы</strong><p>Циклы for (итерация по коллекциям) и while (выполняется пока условие истинно). Управление: break (выход), continue (переход на следующую итерацию), else (выполняется после нормального завершения цикла).</p></div>
+                <div class="question"><strong>2. Обработка событий виджетов</strong><p>События в Kivy обрабатываются через привязку методов: on_press, on_release, on_click, on_text, on_slider_value и др. В KV: on_press: app.do_something(). В Python: btn.bind(on_press=self.callback).</p></div>
+            </div>
+
+            <!-- Билет №11 -->
+            <div class="ticket">
+                <div class="ticket-number">Билет №11</div>
+                <div class="question"><strong>1. Структуры данных языка Python: списки, словари. Методы работы со списками, словарями</strong><p>Списки: append(), extend(), insert(), remove(), pop(), index(), count(), sort(), reverse(). Словари: keys(), values(), items(), get(), pop(), update(), setdefault(). Доступ по ключу.</p></div>
+                <div class="question"><strong>2. Дерево виджетов – как основа пользовательского интерфейса</strong><p>В Kivy UI строится как дерево виджетов, где корневой виджет (Root Widget) содержит дочерние. Дочерние виджеты могут иметь свои дочерние элементы. Управление иерархией через add_widget() и remove_widget().</p></div>
+            </div>
+
+            <!-- Билет №12 -->
+            <div class="ticket">
+                <div class="ticket-number">Билет №12</div>
+                <div class="question"><strong>1. Объекты – кортеж, множества</strong><p>Кортеж (tuple) — неизменяемая упорядоченная коллекция (a = (1, 2, 3)). Множество (set) — неупорядоченная коллекция уникальных элементов (s = {1, 2, 3}). Методы: add(), remove(), union(), intersection(), difference().</p></div>
+                <div class="question"><strong>2. Виджеты для позиционирования элементов интерфейса в приложениях на Kivy</strong><p>FloatLayout (свободное позиционирование), BoxLayout (горизонтальное/вертикальное выравнивание), GridLayout (сетка), AnchorLayout (привязка к сторонам), RelativeLayout (относительное позиционирование).</p></div>
+            </div>
+
+            <!-- Билет №13 -->
+            <div class="ticket">
+                <div class="ticket-number">Билет №13</div>
+                <div class="question"><strong>1. Понятие функции. Конструкции и методы создания функций в языке Python</strong><p>Функция — блок кода, который выполняется при вызове. Создаётся с помощью def имя(параметры):. Может возвращать значение через return. Пример: def add(a, b): return a + b.</p></div>
+                <div class="question"><strong>2. Виджет Carousel для пролистывания слайдов</strong><p>Carousel — виджет Kivy для создания галереи с пролистыванием (свайпом). Содержит слайды (дочерние виджеты). Настройка: loop (зацикливание), direction (направление), duration (время анимации).</p></div>
+            </div>
+
+            <!-- Билет №14 -->
+            <div class="ticket">
+                <div class="ticket-number">Билет №14</div>
+                <div class="question"><strong>1. Передача аргументов в параметры функций. Лямбда функции в языке Python</strong><p>Аргументы передаются по позиции или по имени (ключевые аргументы). Можно задавать значения по умолчанию. Лямбда-функции — анонимные функции: lambda x, y: x + y. Используются в map(), filter(), sort() и др.</p></div>
+                <div class="question"><strong>2. Задание цвета фона виджету – контейнеру</strong><p>Для контейнеров (например, BoxLayout) цвет фона задаётся через canvas.before: Color и Rectangle. В KV: canvas.before: Color(rgba: 0.2, 0.2, 0.2, 1); Rectangle(pos: self.pos, size: self.size).</p></div>
+            </div>
+
+            <!-- Билет №15 -->
+            <div class="ticket">
+                <div class="ticket-number">Билет №15</div>
+                <div class="question"><strong>1. Анонимные функции и их применение внутри функций высшего порядка</strong><p>Анонимные функции (lambda) часто используются как аргументы функций высшего порядка: map(lambda x: x**2, numbers), filter(lambda x: x > 0, numbers), sorted(data, key=lambda x: x['age']).</p></div>
+                <div class="question"><strong>2. Индексация элементов в дереве виджетов</strong><p>Доступ к дочерним виджетам через индексы: root.children[0] (последний добавленный). Для поиска по id: self.ids.my_widget. Также можно использовать recurrency для обхода дерева.</p></div>
+            </div>
+
+            <!-- Билет №16 и №17 (одинаковые вопросы) -->
+            <div class="ticket">
+                <div class="ticket-number">Билет №16</div>
+                <div class="question"><strong>1. Работа синхронных функций. Создание асинхронной функции</strong><p>Синхронные функции выполняются последовательно. Асинхронные (async def) позволяют выполнять операции без блокировки, используя await. Пример: async def fetch_data(): await asyncio.sleep(1); return "data".</p></div>
+                <div class="question"><strong>2. Классы Screen и ScreenManager для создания много экранных приложений</strong><p>ScreenManager управляет переключением между экранами (Screen). Каждый экран содержит свой интерфейс. Переключение: sm.current = 'second_screen' или sm.switch_to(screen). Используется в Kivy для многостраничных приложений.</p></div>
+            </div>
+            <div class="ticket">
+                <div class="ticket-number">Билет №17</div>
+                <div class="question"><strong>1. Работа синхронных функций. Создание асинхронной функции</strong><p>Синхронные функции выполняются последовательно. Асинхронные (async def) позволяют выполнять операции без блокировки, используя await. Пример: async def fetch_data(): await asyncio.sleep(1); return "data".</p></div>
+                <div class="question"><strong>2. Классы Screen и ScreenManager для создания много экранных приложений</strong><p>ScreenManager управляет переключением между экранами (Screen). Каждый экран содержит свой интерфейс. Переключение: sm.current = 'second_screen' или sm.switch_to(screen). Используется в Kivy для многостраничных приложений.</p></div>
+            </div>
+
+            <!-- Билет №18 -->
+            <div class="ticket">
+                <div class="ticket-number">Билет №18</div>
+                <div class="question"><strong>1. Возможности подключаемых библиотек языка Python</strong><p>Библиотеки расширяют функциональность: NumPy/SciPy (научные вычисления), Pandas (анализ данных), Matplotlib (визуализация), Requests (HTTP), BeautifulSoup (парсинг), Pygame (игры), OpenCV (компьютерное зрение), Django/Flask (веб).</p></div>
+                <div class="question"><strong>2. Класс Window для формирования окна приложения</strong><p>Window — класс Kivy для управления окном приложения. Позволяет задавать размер (Window.size), заголовок (Window.title), положение, полноэкранный режим, обрабатывать события закрытия и изменения размера.</p></div>
+            </div>
+
+            <!-- Билет №19 -->
+            <div class="ticket">
+                <div class="ticket-number">Билет №19</div>
+                <div class="question"><strong>1. Возможности подключаемых библиотек языка Python</strong><p>Библиотеки расширяют функциональность: NumPy/SciPy (научные вычисления), Pandas (анализ данных), Matplotlib (визуализация), Requests (HTTP), BeautifulSoup (парсинг), Pygame (игры), OpenCV (компьютерное зрение), Django/Flask (веб).</p></div>
+                <div class="question"><strong>2. Структура приложений на KivyMD</strong><p>KivyMD — библиотека Material Design для Kivy. Структура: класс приложения наследуется от MDApp, используется MDThemeManager для тем, интерфейс строится на MD-виджетах (MDRectangleFlatButton, MDTextField, MDScreen, MDToolbar и др.).</p></div>
+            </div>
+
+            <!-- Билет №20 -->
+            <div class="ticket">
+                <div class="ticket-number">Билет №20</div>
+                <div class="question"><strong>1. Модули и основные функции библиотек time и random</strong><p>time: time() (текущее время), sleep(sec) (задержка), localtime() (структура времени). random: random() (число от 0 до 1), randint(a,b), choice(seq), shuffle(list), uniform(a,b).</p></div>
+                <div class="question"><strong>2. Структура приложений на KivyMD</strong><p>KivyMD — библиотека Material Design для Kivy. Структура: класс приложения наследуется от MDApp, используется MDThemeManager для тем, интерфейс строится на MD-виджетах (MDRectangleFlatButton, MDTextField, MDScreen, MDToolbar и др.).</p></div>
+            </div>
+
+            <!-- Билет №21 -->
+            <div class="ticket">
+                <div class="ticket-number">Билет №21</div>
+                <div class="question"><strong>1. Открытие и сохранение файлов разных форматов с использованием библиотек языка Python</strong><p>Встроенная функция open(): чтение/запись текстовых и бинарных файлов. Для CSV — csv.reader/writer. Для JSON — json.load/dump. Для Excel — openpyxl, pandas. Для изображений — PIL (Pillow).</p></div>
+                <div class="question"><strong>2. Структура много экранных приложений на основе менеджера экранов (ScreenManager)</strong><p>Создаётся ScreenManager, в него добавляются экраны (Screen). Каждый экран содержит свой интерфейс (виджеты). Переключение происходит по имени экрана или через переходы (Transition). Пример: sm.current = 'settings'.</p></div>
+            </div>
+
+            <!-- Билет №22 -->
+            <div class="ticket">
+                <div class="ticket-number">Билет №22</div>
+                <div class="question"><strong>1. Понятие объекта. Создание методов объекта и их полей</strong><p>Объект — экземпляр класса. Поля (атрибуты) и методы определяются в классе. Для создания объекта: obj = MyClass(). Методы определяются как def method(self):, обращение к полям через self.field.</p></div>
+                <div class="question"><strong>2. Стили KivyMD для задания цвета элементам интерфейса</strong><p>В KivyMD цвета задаются через тему (ThemeManager): primary_palette, primary_hue. Для отдельных элементов: md_bg_color, text_color, accent_color. Используются предопределённые цвета Material Design (Red, Blue, Green и др.).</p></div>
+            </div>
+
+            <!-- Билет №23 -->
+            <div class="ticket">
+                <div class="ticket-number">Билет №23</div>
+                <div class="question"><strong>1. Свойства ООП: понятие инкапсуляции, наследования, полиморфизма</strong><p>Инкапсуляция — сокрытие внутреннего состояния (приватные атрибуты _ и __). Наследование — создание нового класса на основе существующего (class Child(Parent)). Полиморфизм — способность объектов разных классов отвечать на одни и те же методы по-своему.</p></div>
+                <div class="question"><strong>2. Темы KivyMD для настройки цветовых оттенков</strong><p>В KivyMD темы задаются через ThemeManager: theme_cls.primary_palette = "Blue", theme_cls.primary_hue = "500", theme_cls.theme_style = "Dark" или "Light". Также можно использовать accent_palette и accent_hue.</p></div>
+            </div>
+
+            <!-- Билет №24 -->
+            <div class="ticket">
+                <div class="ticket-number">Билет №24</div>
+                <div class="question"><strong>1. Работа магических методов.</strong><p>Магические методы (__init__, __str__, __len__, __add__, __getitem__, __call__ и др.) позволяют переопределять поведение объектов. Вызываются автоматически при определённых операциях (создание объекта, сложение, вызов как функции и т.д.).</p></div>
+                <div class="question"><strong>2. Компоненты KivyMD для позиционирования элементов интерфейса</strong><p>MDBoxLayout, MDGridLayout, MDFloatLayout, MDAnchorLayout. Они работают аналогично стандартным Kivy, но с учётом Material Design. Также есть MDScreen как корневой экран для приложений.</p></div>
+            </div>
+
+            <!-- Билет №25 -->
+            <div class="ticket">
+                <div class="ticket-number">Билет №25</div>
+                <div class="question"><strong>1. Переопределение действий магических методов</strong><p>Для переопределения нужно создать метод в классе. Например, __add__ для перегрузки оператора +, __eq__ для сравнения, __str__ для строкового представления. Это позволяет задать кастомное поведение объектов.</p></div>
+                <div class="question"><strong>2. Компоненты пользовательского интерфейса KivyMD</strong><p>Основные MD-виджеты: MDToolbar (верхняя панель), MDRectangleFlatButton, MDRaisedButton (кнопки), MDTextField (поле ввода), MDList (список), MDCard (карточка), MDDialog (диалоговое окно), MDNavigationDrawer (боковое меню).</p></div>
+            </div>
+
+            <!-- Билет №26 -->
+            <div class="ticket">
+                <div class="ticket-number">Билет №26</div>
+                <div class="question"><strong>1. Диаграммы деятельности. Рекомендации по построению диаграмм деятельности</strong><p>Диаграммы деятельности (Activity Diagram) — UML-диаграммы для моделирования бизнес-процессов и алгоритмов. Рекомендации: начинать с начального узла, использовать ветвления (decision), параллельные потоки (fork/join), завершать конечным узлом.</p></div>
+                <div class="question"><strong>2. Гибкие методологии проектирования</strong><p>Гибкие методологии (Agile) ориентированы на итеративную разработку, частую поставку работающего ПО, тесное взаимодействие с заказчиком. Основные принципы: адаптивность, простота, командная работа, обратная связь.</p></div>
+            </div>
+
+            <!-- Билет №27 -->
+            <div class="ticket">
+                <div class="ticket-number">Билет №27</div>
+                <div class="question"><strong>1. Диаграммы последовательности. Рекомендации по построению диаграмм последовательности</strong><p>Диаграмма последовательности (Sequence Diagram) показывает взаимодействие объектов во времени. Рекомендации: обозначать объекты и их линии жизни, использовать стрелки для сообщений, нумеровать шаги, показывать возвраты, не перегружать деталями.</p></div>
+                <div class="question"><strong>2. Agile методология</strong><p>Agile — это набор принципов и подходов к разработке ПО, основанный на итерациях, самоорганизации команд, частой поставке ценности заказчику. Включает Scrum, Kanban, Extreme Programming (XP) и др.</p></div>
+            </div>
+
+            <!-- Билет №28 -->
+            <div class="ticket">
+                <div class="ticket-number">Билет №28</div>
+                <div class="question"><strong>1. Требования к интерфейсу пользователя. Принципы создания графического пользовательского интерфейса (GUI)</strong><p>Требования: удобство, интуитивность, эстетичность, отзывчивость, доступность. Принципы: согласованность, обратная связь, понятная навигация, минимализм, предотвращение ошибок, использование стандартных паттернов (F-образный макет, правило 3-х кликов).</p></div>
+                <div class="question"><strong>2. Scrum методология</strong><p>Scrum — гибкая методология с фиксированными спринтами (обычно 2-4 недели). Роли: Product Owner (формирует бэклог), Scrum Master (фасилитатор), Команда. Артефакты: бэклог спринта, инкремент продукта. События: Sprint Planning, Daily Stand-up, Sprint Review, Sprint Retrospective.</p></div>
+            </div>
+
+            <!-- Билет №29 -->
+            <div class="ticket">
+                <div class="ticket-number">Билет №29</div>
+                <div class="question"><strong>1. Понятие спецификации языка программирования. Синтаксис языка программирования. Стиль программирования</strong><p>Спецификация — официальный документ, описывающий синтаксис, семантику и стандартную библиотеку. Синтаксис — правила написания конструкций (переменные, операторы, функции). Стиль (PEP 8) — рекомендации по оформлению кода (отступы, имена, пробелы).</p></div>
+                <div class="question"><strong>2. Lean методология</strong><p>Lean (бережливое производство) — методология, направленная на устранение потерь и оптимизацию процессов. В разработке ПО: минимизация ненужной документации, сокращение времени между идеей и реализацией, быстрая обратная связь, непрерывное улучшение.</p></div>
+            </div>
+
+            <!-- Билет №30 -->
+            <div class="ticket">
+                <div class="ticket-number">Билет №30</div>
+                <div class="question"><strong>1. Разработка графического интерфейса пользователя</strong><p>Этапы: анализ требований, проектирование (wireframes, макеты), выбор фреймворка (Kivy, PyQt, Tkinter), разработка интерфейса (верстка, стилизация), реализация логики, тестирование (юзабилити, кроссплатформенность), развертывание.</p></div>
+                <div class="question"><strong>2. Kanban методология</strong><p>Kanban — метод управления потоком работы, визуализируемый на доске (столбцы: To Do, In Progress, Done). Принципы: ограничение незавершенной работы (WIP), непрерывный поток, приоритизация задач, минимизация времени выполнения.</p></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
